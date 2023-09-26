@@ -1,4 +1,10 @@
 terraform {
+  cloud {
+    organization = "WAE"
+    workspaces {
+      name = "EC2AutoShutdown"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -9,6 +15,5 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region  = "us-east-1"
-  profile = "blackeagle"
+  region = "us-east-1"
 }
