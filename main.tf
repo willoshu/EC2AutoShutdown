@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "WAE"
+    organization = "YourTFCloudOrganization"
     workspaces {
       name = "EC2AutoShutdown"
     }
