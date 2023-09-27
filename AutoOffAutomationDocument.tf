@@ -20,7 +20,7 @@ mainSteps:
       Targets:
         - Key: 'tag:mygroup'
           Values:
-            - wae
+            - auto_off
       Parameters:
         commands:
           - 'myuptime=$(cat /proc/uptime | awk ''{print $1}'')'
