@@ -1,5 +1,5 @@
-resource "aws_ssm_document" "AutoOffInactiveEC2" {
-  name            = "AutoOffInactiveEC2"
+resource "aws_ssm_document" "AutoOffAutomationDocument" {
+  name            = "AutoOffAutomationDocument"
   document_type   = "Automation"
   document_format = "YAML"
   content         = <<DOC
@@ -7,13 +7,13 @@ description: |-
 
 
   ---
-  # WAE-AutoOffInactiveEC2
+  # AutoOffAutomationDocument
   Auto shutdown ec2 when no user is logged in
   ## How to trigger
   Create an eventbridge scheduled event
 schemaVersion: '0.3'
 mainSteps:
-  - name: AutoOffInactiveEC2
+  - name: AutoOffAutomationDocument
     action: 'aws:runCommand'
     inputs:
       DocumentName: AWS-RunShellScript
