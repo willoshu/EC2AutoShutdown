@@ -1,6 +1,6 @@
 resource "aws_ssm_document" "AutoOffInactiveEC2" {
   name            = "AutoOffInactiveEC2"
-  document_type   = "Command"
+  document_type   = "Automation"
   document_format = "YAML"
   content         = <<DOC
 description: |-
