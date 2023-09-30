@@ -1,10 +1,12 @@
 terraform {
+  /* Uncomment this block to use Terraform Cloud
   cloud {
-    organization = "YourTFCloudOrganization"
+    organization = "organization-name"
     workspaces {
       name = "EC2AutoShutdown"
     }
   }
+  */
   required_providers {
     aws = {
       source  = "hashicorp/aws"
